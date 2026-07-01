@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using EpochWar.Core.Commands;
 using EpochWar.Core.State;
@@ -9,10 +9,10 @@ using NUnit.Framework;
 namespace EpochWar.Tests.EditMode
 {
     /// <summary>
-    /// Example-based unit tests for <see cref="UnitSystem"/> (Requirement 3.1–3.5, 9.2, 11.2).
+    /// Example-based unit tests for <see cref="UnitSystem"/> (Requirement 3.1â€“3.5, 9.2, 11.2).
     ///
     /// These cover concrete, named scenarios for recruitment/build queues (3.1), movement orders
-    /// over the nav grid (3.2), Battalion grouping/commanding/removal (3.3–3.5), Doomsday deployment
+    /// over the nav grid (3.2), Battalion grouping/commanding/removal (3.3â€“3.5), Doomsday deployment
     /// (9.2), and the Colony_Ship colonization sequence (11.2). They complement the universal FsCheck
     /// properties added by the optional tasks 9.2/9.4/9.6/9.10.
     /// </summary>
@@ -320,7 +320,7 @@ namespace EpochWar.Tests.EditMode
             var events = units.Tick(state, 1f); // sweep removes the zero-health unit
 
             Assert.That(state.Units.ContainsKey(1), Is.False, "zero-health unit removed from the match");
-            Assert.That(nation.Battalions[5].MemberUnitIds, Does.Not.Contain(1), "removed from its battalion");
+            Assert.That(nation.Battalions[5].MemberUnitIds, Has.No.Member(1), "removed from its battalion");
             Assert.That(nation.Battalions[5].MemberUnitIds, Does.Contain(2), "surviving member stays");
             Assert.That(nation.Population, Is.EqualTo(6), "population released back to the pool");
             Assert.That(events.OfType<UnitEliminatedEvent>().Single().UnitId, Is.EqualTo(1));

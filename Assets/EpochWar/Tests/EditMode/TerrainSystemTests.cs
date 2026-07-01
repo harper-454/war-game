@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using EpochWar.Core.Commands;
 using EpochWar.Core.Navigation;
@@ -166,7 +166,7 @@ namespace EpochWar.Tests.EditMode
             var events = sys.Tick(state);
 
             Assert.That(state.Units.ContainsKey(20), Is.False, "destroyed unit is removed from the Match");
-            Assert.That(battalion.MemberUnitIds, Does.Not.Contain(20), "removed unit leaves its battalion");
+            Assert.That(battalion.MemberUnitIds, Has.No.Member(20), "removed unit leaves its battalion");
             var loss = SupportLosses(events).Single();
             Assert.That(loss.EntityKind, Is.EqualTo(SupportedEntityKind.Unit));
             Assert.That(loss.EntityId, Is.EqualTo(20));
