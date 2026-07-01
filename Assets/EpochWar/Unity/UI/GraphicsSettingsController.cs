@@ -303,7 +303,8 @@ namespace EpochWar.Unity.UI
         // Setting → engine value mappings
         // ------------------------------------------------------------------
 
-        private static ShadowResolution ToShadowResolution(QualityPreset level)
+        private static UnityEngine.Rendering.Universal.ShadowResolution
+ ToShadowResolution(QualityPreset level)
         {
             switch (level)
             {

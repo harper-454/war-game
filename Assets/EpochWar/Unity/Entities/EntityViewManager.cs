@@ -250,7 +250,7 @@ namespace EpochWar.Unity.Entities
             Bind(driver);
         }
 
-        private void OnTicked(IReadOnlyList<GameEvent> events) => Reconcile();
+        private void OnTicked(IReadOnlyList<NetGameEvent> events) => Reconcile();
 
         /// <summary>
         /// Runs one spawn/mirror/despawn pass against the current core state. Public so scene wiring or
