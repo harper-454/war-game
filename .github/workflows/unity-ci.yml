@@ -1,0 +1,116 @@
+name: Unity CI (EpochWar)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Assets/EpochWar/**"
+      - "Packages/**"
+      - "ProjectSettings/**"
+      - ".github/workflows/unity-ci.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "Assets/EpochWar/**"
+      - "Packages/**"
+      - "ProjectSettings/**"
+      - ".github/workflows/unity-ci.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: unity-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  editmode-tests:
+    name: EditMode tests (headless Unity compile)
+    runs-on: ubuntu-latest
+    env:
+      UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+      UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+      UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+      UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Cache Library
+        uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-EpochWar-6000.5.2f1-${{ hashFiles('Packages/manifest.json') }}
+          restore-keys: |
+            Library-EpochWar-6000.5.2f1-
+            Library-EpochWar-
+
+      - name: Fetch test DLLs (FsCheck + FSharp.Core)
+        shell: bash
+        run: |
+          set -euo pipefail
+          FSCHECK_VERSION="2.16.6"
+          FSHARP_CORE_VERSION="8.0.401"
+          PLUGINS_DIR="Assets/EpochWar/Tests/Plugins"
+          WORK="$(mktemp -d)"
+          mkdir -p "$PLUGINS_DIR"
+
+          download_nupkg() {
+            local id_lower="$1" version="$2" out="$3"
+            local url="https://api.nuget.org/v3-flatcontainer/${id_lower}/${version}/${id_lower}.${version}.nupkg"
+            echo "Downloading ${id_lower} ${version}"
+            curl -fSL --retry 3 --retry-delay 2 -o "$out" "$url"
+          }
+
+          extract_dll() {
+            local nupkg="$1" dll="$2" extract_dir="$3"
+            rm -rf "$extract_dir" && mkdir -p "$extract_dir"
+            unzip -q "$nupkg" -d "$extract_dir"
+            local candidates=(
+              "$extract_dir/lib/netstandard2.0/$dll"
+              "$extract_dir/lib/netstandard2.1/$dll"
+            )
+            for c in "${candidates[@]}"; do
+              if [ -f "$c" ]; then
+                cp "$c" "$PLUGINS_DIR/$dll"
+                echo "Copied $dll"
+                return 0
+              fi
+            done
+            local found
+            found="$(find "$extract_dir/lib" -name "$dll" -type f 2>/dev/null | sort | head -n1 || true)"
+            if [ -n "$found" ]; then
+              cp "$found" "$PLUGINS_DIR/$dll"
+              return 0
+            fi
+            echo "::error::Could not locate $dll"
+            return 1
+          }
+
+          download_nupkg "fscheck" "$FSCHECK_VERSION" "$WORK/fscheck.nupkg"
+          download_nupkg "fsharp.core" "$FSHARP_CORE_VERSION" "$WORK/fsharp.core.nupkg"
+          extract_dll "$WORK/fscheck.nupkg" "FsCheck.dll" "$WORK/fscheck"
+          extract_dll "$WORK/fsharp.core.nupkg" "FSharp.Core.dll" "$WORK/fsharpcore"
+
+          for required in "FsCheck.dll" "FSharp.Core.dll"; do
+            if [ ! -f "$PLUGINS_DIR/$required" ]; then
+              echo "::error::$required missing after fetch."
+              exit 1
+            fi
+          done
+
+      - name: Run EditMode tests
+        uses: game-ci/unity-test-runner@v4
+        with:
+          testMode: editmode
+          unityVersion: 6000.5.2f1
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          artifactsPath: artifacts
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: editmode-test-results
+          path: artifacts
+          if-no-files-found: warn
