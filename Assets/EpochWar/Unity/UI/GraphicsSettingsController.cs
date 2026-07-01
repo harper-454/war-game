@@ -204,9 +204,9 @@ namespace EpochWar.Unity.UI
             _appliedVSync = vm.VSync;
         }
 
-        private void ApplyShadowQuality(QualityPreset level)
+                private void ApplyShadowQuality(QualityPreset level)
         {
-            QualitySettings.shadowResolution = ToShadowResolution(level);
+            QualitySettings.shadowResolution = (UnityEngine.ShadowResolution)(int)ToShadowResolution(level);
             QualitySettings.shadowDistance = ToShadowDistance(level);
 
             if (QualitySettings.renderPipeline is UniversalRenderPipelineAsset urp)
@@ -303,15 +303,14 @@ namespace EpochWar.Unity.UI
         // Setting → engine value mappings
         // ------------------------------------------------------------------
 
-        private static UnityEngine.Rendering.Universal.ShadowResolution
- ToShadowResolution(QualityPreset level)
+        private static int ToShadowResolution(QualityPreset level)
         {
             switch (level)
             {
-                case QualityPreset.Ultra: return ShadowResolution.VeryHigh;
-                case QualityPreset.High: return ShadowResolution.High;
-                case QualityPreset.Medium: return ShadowResolution.Medium;
-                default: return ShadowResolution.Low;
+                case QualityPreset.Ultra: return 3; // VeryHigh
+                case QualityPreset.High: return 2;  // High
+                case QualityPreset.Medium: return 1; // Medium
+                default: return 0;                   // Low
             }
         }
 

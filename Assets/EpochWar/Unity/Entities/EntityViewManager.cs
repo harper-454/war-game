@@ -746,7 +746,7 @@ namespace EpochWar.Unity.Entities
             return Color.HSVToRGB(hue, 0.7f, 0.95f);
         }
 
-        private void ApplyNationColor(GameObject marker, Color color)
+             private void ApplyNationColor(GameObject marker, Color color)
         {
             if (marker == null)
             {
@@ -756,4 +756,46 @@ namespace EpochWar.Unity.Entities
             _markerColorBlock ??= new MaterialPropertyBlock();
 
             var renderers = marker.GetComponentsInChildren<Renderer>(includeInactive: true);
-            foreach (Renderer
+            foreach (Renderer r in renderers)
+            {
+                if (r == null)
+                {
+                    continue;
+                }
+
+                r.GetPropertyBlock(_markerColorBlock);
+                _markerColorBlock.SetColor(BaseColorId, color); // URP lit/unlit base colour
+                _markerColorBlock.SetColor(ColorId, color);     // built-in / sprite colour
+                r.SetPropertyBlock(_markerColorBlock);
+            }
+        }
+
+        /// <summary>Number of live Unit views (diagnostic/testing aid).</summary>
+        public int UnitViewCount => _unitViews.Count;
+
+        /// <summary>Number of live Structure views (diagnostic/testing aid).</summary>
+        public int StructureViewCount => _structureViews.Count;
+
+        /// <summary>Per-Unit level-of-detail state for the readability behaviour (Req 8).</summary>
+        private sealed class UnitLod
+        {
+            /// <summary>Renderers of the full-detail view, cached at creation (excludes the marker).</summary>
+            public Renderer[] Renderers;
+
+            /// <summary>Original shadow-casting modes, restored when detail reduction is lifted.</summary>
+            public ShadowCastingMode[] ShadowModes;
+
+            /// <summary>The lazily-created simplified marker child; null until the first simplify.</summary>
+            public GameObject Marker;
+
+            /// <summary>True while the Unit is rendered as the simplified far-zoom marker (Req 8.2).</summary>
+            public bool Simplified;
+
+            /// <summary>True while density-driven detail reduction (shadows off) is applied (Req 8.1).</summary>
+            public bool ReducedDetail;
+
+            /// <summary>Unscaled time of the last simplify<->full flip, gating the re-toggle interval (Req 8.4).</summary>
+            public float LastSimplifyToggleTime;
+        }
+    }
+}
