@@ -1,0 +1,20 @@
+{
+    "name": "EpochWar.Unity",
+    "rootNamespace": "EpochWar.Unity",
+    "references": [
+        "EpochWar.Core",
+        "Unity.Netcode.Runtime",
+        "Unity.Collections",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.RenderPipelines.Universal.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

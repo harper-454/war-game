@@ -1,0 +1,26 @@
+# Unity generated
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]serSettings/
+
+# IDE
+.idea/
+.vscode/
+*.csproj
+*.sln
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test plugins (CI-fetched, never commit)
+Assets/EpochWar/Tests/Plugins/
+
+# Unity packages lock (regenerated)
+Packages/packages-lock.json

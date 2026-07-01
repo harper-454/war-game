@@ -1,0 +1,360 @@
+{
+  "pbtResults": {
+    "4.2 Write property tests for ResourceSystem": {
+      "status": "passed",
+      "lastRunTimestamp": 1782871088040
+    },
+    "13.2 Write property test for unified command path": {
+      "status": "passed",
+      "lastRunTimestamp": 1782871666488
+    },
+    "9.2 Write property test for recruitment": {
+      "status": "passed",
+      "lastRunTimestamp": 1782871707375
+    },
+    "9.4 Write property test for movement": {
+      "status": "passed",
+      "lastRunTimestamp": 1782871708372
+    },
+    "9.6 Write property tests for battalions and unit removal": {
+      "status": "passed",
+      "lastRunTimestamp": 1782871709376
+    },
+    "9.8 Write property test for combat": {
+      "status": "passed",
+      "lastRunTimestamp": 1782871710370
+    },
+    "9.10 Write property tests for special operations": {
+      "status": "passed",
+      "lastRunTimestamp": 1782871710792
+    },
+    "12.2 Write property tests for VictorySystem": {
+      "status": "passed",
+      "lastRunTimestamp": 1782871726081
+    },
+    "16.2 Write property test for info panel content": {
+      "status": "passed",
+      "lastRunTimestamp": 1782872288901
+    },
+    "16.4 Write property test for command control availability": {
+      "status": "passed",
+      "lastRunTimestamp": 1782872293225
+    }
+  },
+  "executionHistory": {
+    "11. Checkpoint - Ensure all core system tests pass": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782870714478
+      },
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782872343425
+      }
+    ],
+    "18. Final checkpoint - Ensure all tests pass": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782870714482
+      },
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782872343714
+      }
+    ],
+    "2.3 Write unit tests for Era ordering and attribute schema": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782870769783
+      },
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871169923
+      }
+    ],
+    "3.2 Write unit tests for router dispatch and rejection-as-result": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782870770145
+      },
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871170605
+      }
+    ],
+    "4.2 Write property tests for ResourceSystem": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782870770761
+      },
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871172485
+      }
+    ],
+    "5.2 Write property tests for TechSystem": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782870771745
+      },
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871173405
+      }
+    ],
+    "6.2 Write property tests for CivSystem": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782870772793
+      },
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871173765
+      }
+    ],
+    "2. Define content catalog and runtime state models": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871169926
+      }
+    ],
+    "3. Implement the single authoritative command pipeline": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871170608
+      }
+    ],
+    "4. Implement ResourceSystem": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871172489
+      }
+    ],
+    "5. Implement TechSystem": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871173407
+      }
+    ],
+    "6. Implement CivSystem": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871173769
+      }
+    ],
+    "7.3 Write property tests for terrain core": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871761443
+      }
+    ],
+    "7. Implement terrain volume and pathfinding core": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871761447
+      }
+    ],
+    "8.2 Write property test for support loss": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871762364
+      }
+    ],
+    "8. Implement TerrainSystem tick and support consequences": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871762368
+      }
+    ],
+    "9.2 Write property test for recruitment": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871763341
+      }
+    ],
+    "9. Implement UnitSystem and CombatSystem": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871763344
+      }
+    ],
+    "9.4 Write property test for movement": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871764345
+      }
+    ],
+    "9.6 Write property tests for battalions and unit removal": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871765421
+      }
+    ],
+    "9.8 Write property test for combat": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871766442
+      }
+    ],
+    "9.10 Write property tests for special operations": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871767335
+      }
+    ],
+    "10.2 Write property tests for BaseSystem": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871768371
+      }
+    ],
+    "10. Implement BaseSystem": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871768374
+      }
+    ],
+    "12.2 Write property tests for VictorySystem": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871770141
+      }
+    ],
+    "12. Implement VictorySystem": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871770151
+      }
+    ],
+    "13.2 Write property test for unified command path": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871770550
+      }
+    ],
+    "13. Wire the fixed-tick simulation loop and AI command path": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871770553
+      }
+    ],
+    "16.2 Write property test for info panel content": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871771489
+      },
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782872338122
+      }
+    ],
+    "16.4 Write property test for command control availability": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871772534
+      },
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782872338766
+      }
+    ],
+    "17.2 Write unit test for end-of-match summary": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871774255
+      },
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782872339623
+      }
+    ],
+    "14.4 Write PlayMode integration tests for networking and terrain sync": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782871775214
+      },
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782872341599
+      }
+    ],
+    "16. Implement UI Toolkit interface": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782872338125
+      }
+    ],
+    "17. Implement match lifecycle presentation and wiring": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782872339626
+      }
+    ],
+    "14. Implement host-authoritative networking (Netcode for GameObjects)": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782872341602
+      }
+    ],
+    "1. Set up project structure and deterministic core foundation": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782872398388
+      }
+    ],
+    "15. Implement presentation shell and content assets": [
+      {
+        "executionId": "e0c8a33e-720b-4fc8-aa32-594b82f02553",
+        "chatSessionId": "86e94750-76a2-4eaa-9ff8-562dbbf95e32",
+        "timestamp": 1782872401734
+      }
+    ]
+  }
+}

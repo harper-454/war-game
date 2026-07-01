@@ -1,0 +1,27 @@
+{
+    "name": "EpochWar.Tests.EditMode",
+    "rootNamespace": "EpochWar.Tests.EditMode",
+    "references": [
+        "EpochWar.Core",
+        "EpochWar.Unity",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll",
+        "FsCheck.dll",
+        "FSharp.Core.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

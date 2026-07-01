@@ -1,0 +1,17 @@
+{
+  "pbtResults": {
+    "12.2 Write property test for FlankClassifier": {
+      "status": "passed",
+      "lastRunTimestamp": 1782902658335
+    },
+    "16.2 Write property tests for Area_Effect resolution": {
+      "status": "passed",
+      "lastRunTimestamp": 1782904326431
+    },
+    "21.3 Write property tests for indirect fire": {
+      "status": "passed",
+      "lastRunTimestamp": 1782906758171
+    }
+  },
+  "executionHistory": {}
+}
