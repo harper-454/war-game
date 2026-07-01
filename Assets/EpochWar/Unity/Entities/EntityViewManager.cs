@@ -1,3 +1,4 @@
+using EpochWar.Unity.Net;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -5,6 +6,7 @@ using EpochWar.Core.State;
 using EpochWar.Core.State.Content;
 using EpochWar.Core.Systems;
 using EpochWar.Unity.Bootstrap;
+
 
 namespace EpochWar.Unity.Entities
 {
