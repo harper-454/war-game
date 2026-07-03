@@ -24,3 +24,7 @@ Assets/EpochWar/Tests/Plugins/
 
 # Unity packages lock (regenerated)
 Packages/packages-lock.json
+
+# Agent Configs
+.kilo/
+.kiro/
